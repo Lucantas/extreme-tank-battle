@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/allSprites_default.png" type="Texture" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="GrassRoadCornerLL" type="Sprite" parent="."]
+position = Vector2( 125.263, 112.632 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 320, 64, 64 )
+
+[node name="GrassRoadCornerUL" type="Sprite" parent="."]
+position = Vector2( 125.263, 177.895 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 64, 64 )
+
+[node name="GrassRoadCornerUR" type="Sprite" parent="."]
+position = Vector2( 60, 178.947 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 256, 64, 64 )
+
+[node name="GrassRoadCornerLR" type="Sprite" parent="."]
+position = Vector2( 60, 112.632 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 384, 64, 64 )
+
+[node name="TileGrass1" type="Sprite" parent="."]
+position = Vector2( 144.211, 32.6315 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 384, 64, 64 )
+
+[node name="TileGrass2" type="Sprite" parent="."]
+position = Vector2( 212.632, 35.7894 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 320, 64, 64 )
+
+[node name="GrassRoadCrossing" type="Sprite" parent="."]
+position = Vector2( 34.2382, 33.5734 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 319, 64, 64 )
+
+[node name="GrassRoadCrossingRound" type="Sprite" parent="."]
+position = Vector2( 201.551, 178.726 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 64, 64 )
+
+[node name="GrassRoadEast" type="Sprite" parent="."]
+position = Vector2( 266.925, 178.726 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 128, 64, 64 )
+
+[node name="GrassRoadNorth" type="Sprite" parent="."]
+position = Vector2( 201.551, 242.992 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 192, 64, 64 )
+
+[node name="GrassRoadSplitE" type="Sprite" parent="."]
+position = Vector2( 202.286, 307.051 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 64, 64, 64 )
+
+[node name="GrassRoadSplitN" type="Sprite" parent="."]
+position = Vector2( 332.287, 179.116 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 128, 64, 64 )
+
+[node name="GrassRoadSplitS" type="Sprite" parent="."]
+position = Vector2( 332.117, 115.328 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 64, 64 )
+
+[node name="GrassRoadSplitW" type="Sprite" parent="."]
+position = Vector2( 266.439, 307.057 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 256, 64, 64 )
+
