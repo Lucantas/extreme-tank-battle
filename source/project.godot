@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Tank_Battle"
-run/main_scene="res://Characters/Tank/Main.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [display]
