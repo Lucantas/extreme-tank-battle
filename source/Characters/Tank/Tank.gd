@@ -7,3 +7,4 @@ export (int) var speed = 200
 var velocity = Vector2()
 var alive = true
 var rotation_dir = 0
+

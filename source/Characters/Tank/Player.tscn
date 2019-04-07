@@ -1,12 +1,55 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Characters/Tank/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/tilesets/onlyObjects_default.png" type="Texture" id=2]
 [ext_resource path="res://assets/allSprites_default_fixed.png" type="Texture" id=3]
 [ext_resource path="res://Characters/Tank/Barrel.gd" type="Script" id=4]
+[ext_resource path="res://assets/allSprites_default.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18.0637, 19.8665 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "muzzle-flash"
+length = 0.15
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Barrel/MuzzleFlash:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.000640099, 0.08, 0.14 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Barrel/MuzzleFlash:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.001, 0.04, 0.08 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.3, 0.3 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Barrel/MuzzleFlash:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 28.6289, -0.50663 ), Vector2( 32.707, -0.50663 ), Vector2( 36.785, -0.507 ) ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -19,12 +62,22 @@ region_enabled = true
 region_rect = Rect2( 216, 168, 42, 40 )
 
 [node name="Barrel" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 21.8457, 29.7 )
 texture = ExtResource( 3 )
 offset = Vector2( 10, 0 )
 region_enabled = true
 region_rect = Rect2( 373.52, 18.375, 29.25, 11.375 )
 script = ExtResource( 4 )
+
+[node name="MuzzleFlash" type="Sprite" parent="Barrel"]
+modulate = Color( 1, 1, 1, 0.368592 )
+position = Vector2( 32.3709, -0.5068 )
+rotation = 1.5708
+scale = Vector2( 0.626491, 0.626491 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 514.153, 288.957, 16, 27 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 21.7654, 29.5063 )
@@ -36,4 +89,7 @@ current = true
 zoom = Vector2( 0.8, 0.8 )
 limit_left = 0
 limit_top = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/muzzle-flash = SubResource( 2 )
 
